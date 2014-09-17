@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/fullcalendar.css">
+    <link rel="stylesheet" type="text/css" href="../css/fullcalendar.print.css">
+
+    <title>jquery calendar</title>
+    <!-- 引用jQuery及其fullcalendar相关js //-->
+    <script type="text/javascript" src="../js/moment-2.8.3/moment.js" ></script>
+    <script type="text/javascript" src="../js/jquery-2.1.1.js" ></script>
+    <script type="text/javascript" src="../js/fullcalendar-2.1.1/fullcalendar.min.js" ></script>
+    <!-- 小提示：moment需要在引用fullcalendar插件之前引入 //-->
+
+    <style type="text/css">
+        /* 添加一些自定义CSS */
+        body {
+            margin: 40px 10px;
+            padding: 0;
+            font-family: 'microsoft yahei', Arial, sans-serif;
+            font-size: 14px;
+        }
+        #calendar {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        $(function() {
+            $('#calendar').fullCalendar({
+                //定义选项
+                //定义头部
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                defaultDate: '2014-09-12',
+                editable: true,
+                eventLimit: true,
+                //以下定义事件
+                events: [
+                    {
+                        title: '全天事件',
+                        start: '2014-010-05'
+                    },
+                    {
+                        title: '跨日事件',
+                        start: '2014-09-07',
+                        end: '2014-09-10'
+                    },
+                    {
+                        id: 999,
+                        title: '重复事件',
+                        start: '2014-09-09T16:00:00'
+                    },
+                    {
+                        id: 999,
+                        title: '重复事件',
+                        start: '2014-09-16T16:00:00'
+                    },
+                    {
+                        title: '用户大会',
+                        start: '2014-09-25',
+                        end: '2014-10-23'
+                    },
+                    {
+                        title: '会议',
+                        start: '2014-10-12T10:30:00',
+                        end: '2014-10-12T12:30:00'
+                    },
+                    {
+                        title: '午餐',
+                        start: '2015-05-12T12:00:00'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2015-06-12T14:30:00'
+                    },
+                    {
+                        title: 'Happy Hour',
+                        start: '2015-07-12T17:30:00'
+                    },
+                    {
+                        title: 'Dinner',
+                        start: '2015-08-12T20:00:00'
+                    },
+                    {
+                        title: 'Birthday Party',
+                        start: '2015-09-13T07:00:00'
+                    },
+                    {
+                        title: '开发代码录播',
+                        url: 'http://www.gbtags.com/',
+                        start: '2015-10-28'
+                    }
+                ]
+            });
+        });
+    </script>
+
+</head>
+<body>
+<!-- 定义日历容器 //-->
+
+<div id="calendar"></div>
+
+
+</body>
+</html>

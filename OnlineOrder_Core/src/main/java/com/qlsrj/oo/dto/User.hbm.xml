@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.qlsrj.oo.dto">
+
+    <class name="User" table="userinfo">
+
+        <id name="userName" column="userName" type="java.lang.Integer">
+            <generator class="native"/>
+        </id>
+        <property name="passWord" column="passWord" type="java.lang.String" not-null="true"/>
+
+        <property name="age" column="age" type="java.lang.String"/>
+
+        <property name="sex" column="sex" type="java.lang.String"/>
+
+        <property name="userType" column="userType" type="java.lang.String"/>
+
+        <property name="logicaldel" column="logicaldel" type="java.lang.String"/>
+
+        <property name="phoneNum" column="phoneNum" type="java.lang.String"/>
+
+        <property name="currenTime" column="currenTime" type="java.util.Date"/>
+
+        <property name="updateTime" column="updateTime" type="java.util.Date"/>
+
+    </class>
+</hibernate-mapping>

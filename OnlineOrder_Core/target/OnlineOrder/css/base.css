@@ -1,0 +1,18 @@
+
+#header, #pagefooter, #container {
+    margin: 0 auto;
+    width: 760px;
+}
+
+#side {
+    float: left;
+    width: 500px;
+}
+
+#content {
+    float: left;
+    width: 260px;
+}
+#pagefooter {
+    clear: both;
+}

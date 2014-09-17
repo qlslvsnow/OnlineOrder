@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* 简单流媒体
+   注意: 流媒体要求您删除 HTML 中媒体的高度和宽度属性
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 不支持最大宽度，因此默认为 100% 宽度 */
+.ie6 img {
+	width: 100%;
+}
+/*
+	Dreamweaver 流体网格属性
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	灵感来自于 Ethan Marcotte 的“具有响应的 Web 设计” 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	和 Joni Korpi 的“黄金网格系统”
+	http://goldengridsystem.com/
+*/
+
+/* 移动设备布局: 480px 及更低。 */
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 87.36%;
+	padding-left: 20%;
+	padding-right: 20%;
+	height: 100px;
+}
+#loginContent {
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 380px;
+	height: 70px;
+	background-color: #E8F9F9;
+	text-align: center;
+	
+}
+
+/* 平板电脑布局: 481px 至 768px。样式继承自: 移动设备布局。 */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+}
+#loginContent {
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 380px;
+	height: 60px;
+	background-color: #E8F9F9;
+	text-align: center;
+	padding: 20px 180px;
+}
+}
+
+/* 桌面电脑布局: 769px 至最高 1232px。样式继承自: 移动设备布局和平板电脑布局。 */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 88.2%;
+	max-width: 1232px;
+	padding-left: 0.9%;
+	padding-right: 0.9%;
+	margin: auto;
+}
+#loginContent {
+	margin-top: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 380px;
+	height: 90px;
+	background-color: #E8F9F9;
+	text-align: center;
+	float:right;
+	padding: 20px 0 180px 0;
+}
+#loginContent .pass-button-forgetpsw{
+	width: 365px;
+	height: 50px;
+}
+
+#loginContent .pass-button-submit {
+	width: 160px;
+	height: 50px;
+	font-size: 20px;
+	text-align: center;
+	background-color: #FCC;
+	border-radius: 6px;
+	border: 1px solid;
+	float:right;
+}
+#forgetpassword {
+	margin-left:20px;
+	float:left;
+}
+#username {
+	width: 336px;
+	border: 1px solid #DDD;
+	font-size: 14px;
+	padding: 8px;
+	background: 0 0;
+	background-color: #FFF;
+}
+#password {
+	width: 336px;
+	border: 1px solid #DDD;
+	font-size: 14px;
+	padding: 8px;
+	background: 0 0;
+	background-color: #FFF;
+}
+#loginContent .pass-form-item {
+	/*	height: auto;*/
+	margin-top:0;
+}
+#loginContent .pass-label {
+	width: auto;
+	font-size: 14px;
+	font-weight: 700;
+	color: #333;
+	margin-bottom: 8px;
+	float: left;
+	padding: 0 0 0 14px;
+}
+
+}
